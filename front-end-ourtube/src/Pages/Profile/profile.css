@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+/* General Styles */
+.profile {
+    display: flex;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background-color: #000000;
+    color: white;
+    font-family: 'Lora', serif;
+}
+
+/* Main Profile Page */
+.profile_page {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-left: 270px;
+    color: white;
+    margin-top: 56px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+/* When Sidebar is Inactive */
+.profile_page_inactive {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    color: white;
+    margin-top: 56px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Profile Top Section */
+.profile_top_section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0 20px 0;
+    border-bottom: 1px solid #333;
+}
+
+.profile_top_section_profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.profile_top_section_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profile_top_section_profile:hover .profile_top_section_img {
+    transform: scale(1.1);
+}
+
+.profile_top_section_About {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 20px;
+    width: 70%;
+}
+
+.profile_top_section_About_Name {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.profile_top_section_info {
+    font-size: 16px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.profile_top_section_info span {
+    font-weight: 600;
+}
+
+/* Profile Video Section */
+.profile_videos {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.profile_videos_title {
+    font-size: 22px;
+    padding-bottom: 10px;
+    color: #ccc;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-bottom: 2px solid #333;
+    margin-bottom: 20px;
+}
+
+.profile_videos_title:hover {
+    color: #f44336;
+    cursor: pointer;
+}
+
+.profileVideos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Profile Video Block */
+.profileVideo_block {
+    width: 230px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.profileVideo_block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.profileVideo_block_thumbnail {
+    width: 100%;
+    height: 140px;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+}
+
+.profileVideo_block_thumbnail_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profileVideo_block_thumbnail:hover .profileVideo_block_thumbnail_img {
+    transform: scale(1.1);
+}
+
+.profileVideo_block_detail {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #2a2a2a;
+    border-radius: 0 0 8px 8px;
+    color: white;
+}
+
+.profileVideo_block_detail_name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.profileVideo_block_detail_about {
+    color: #999;
+    font-size: 14px;
+}
+
+/* Hover Effect for Video Blocks */
+.profileVideo_block:hover .profileVideo_block_detail_name {
+    color: #f44336;
+}
+
+.profileVideo_block:hover .profileVideo_block_detail_about {
+    color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile_page {
+        margin-left: 0;
+    }
+
+    .profile_top_section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile_top_section_About {
+        width: 100%;
+        text-align: center;
+    }
+
+    .profile_top_section_About_Name {
+        font-size: 30px;
+    }
+
+    .profile_videos_title {
+        font-size: 18px;
+        padding-bottom: 8px;
+    }
+
+    .profileVideos {
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .profileVideo_block {
+        width: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile {
+        padding: 10px;
+    }
+
+    .profile_top_section_About_Name {
+        font-size: 24px;
+    }
+
+    .profile_top_section_info {
+        font-size: 14px;
+    }
+
+    .profile_videos_title {
+        font-size: 16px;
+    }
+
+    .profileVideos {
+        gap: 15px;
+    }
+
+    .profileVideo_block {
+        width: 160px;
+    }
+
+    .profileVideo_block_detail_name {
+        font-size: 14px;
+    }
+
+    .profileVideo_block_detail_about {
+        font-size: 12px;
+    }
+}
